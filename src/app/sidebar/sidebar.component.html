@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="p-3 pt-5">
+      <a routerLink="/modules"><button class="w-100 mb-3" mat-raised-button>Modules</button></a>
+    <a *ngIf="this.role === 'ETUDIANT'" routerLink="/mes-absences"><button class="w-100 mb-3" mat-raised-button>Mes Absences</button></a>
+      <a *ngIf="this.role === 'ADMIN'" routerLink="/etudiants"><button class="w-100 mb-3" mat-raised-button>Etudiants</button></a>
+      <a *ngIf="this.role === 'ADMIN'" routerLink="/profs"><button class="w-100 mb-3" mat-raised-button>Professeurs</button></a>
+  </div>
+</div>

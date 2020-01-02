@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-3 p-0 m-0">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-9 p-4 m-0">
+
+    <h1 class="title">+ module</h1>
+
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="w-100 mb-2">
+        <label>
+          <input matInput placeholder="Module" name="nom" formControlName="nom">
+        </label>
+        <mat-hint>Nom du module</mat-hint>
+      </mat-form-field>
+      <div class="d-flex justify-content-center">
+        <button mat-raised-button color="primary" type="submit">Ajouter</button>
+      </div>
+    </form>
+
+  </div>
+</div>
