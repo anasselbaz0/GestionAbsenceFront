@@ -1,12 +1,12 @@
 import {Absence} from './Absence';
 
-export class Module {
+export class Etudiant {
+
   id: number;
   nom: string;
+  username: string;
+  password: string;
+  cne: string;
   absences: Absence[];
-
-  constructor(nom: string) {
-    this.nom = nom;
-  }
 
 }

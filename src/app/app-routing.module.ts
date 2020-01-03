@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'etudiant', component: EspaceEtudiantComponent},
   {path: 'prof', component: EspaceProfesseurComponent},
   {path: 'admin', component: EspaceAdminComponent},
-  {path: 'mes-absences', component: MesAbsencesComponent},
+  {path: 'mes-absences', component: EspaceEtudiantComponent},
   {path: 'modules', component: ModulesComponent},
   {path: 'modules/add', component: ModuleAddComponent},
 ];

@@ -1,8 +1,43 @@
-<div class="row">
-  <div class="col-3 p-0 m-0">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="col-9 p-4 m-0">
-    admin
-  </div>
-</div>
+<h1 class="title">mes absences</h1>
+
+<table class="table w-25">
+  <thead>
+  <tr>
+    <th scope="col">Module</th>
+    <th scope="col">Remarque</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let ratt of ratts">
+    <td>{{ ratt.nom }}</td>
+    <td *ngIf="ratt.rattr">Rattrapage</td>
+    <td *ngIf="!ratt.rattr"></td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Module</th>
+    <th scope="col" *ngFor="let ns of nSeances">{{ns}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let module of modules">
+    <td>{{ module.nom }}</td>
+    <td scope="row" *ngFor="let abs of etudiant.absences">
+      <span *ngFor="let m of modules">
+        <span *ngFor="let a of m.absences">
+          <img *ngIf="m.id===module.id && a.id===abs.id && abs.isJustified" height="20" src="assets/valide.png">
+        </span>
+      </span>
+      <span *ngFor="let m of modules">
+        <span *ngFor="let a of m.absences">
+          <img *ngIf="m.id===module.id && a.id===abs.id && !abs.isJustified" height="20" src="assets/not-valide.png">
+        </span>
+      </span>
+    </td>
+  </tr>
+  </tbody>
+</table>
