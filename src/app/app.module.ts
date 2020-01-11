@@ -15,12 +15,20 @@ import { ModuleDeleteComponent } from './module-delete/module-delete.component';
 import { AbsencesEtudiantsComponent } from './absences-etudiants/absences-etudiants.component';
 import { MesAbsencesComponent } from './mes-absences/mes-absences.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
-import {ReactiveFormsModule} from '@angular/forms';
+import {MatIconModule, MatSelectModule, MatCardModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { ProfesseursComponent } from './professeurs/professeurs.component';
+import { ProfesseurAddComponent } from './professeur-add/professeur-add.component';
+import { EtudiantsComponent } from './etudiants/etudiants.component';
+import { EtudiantAddComponent } from './etudiant-add/etudiant-add.component';
+import { ClassesComponent } from './classes/classes.component';
+import { ClasseAddComponent } from './classe-add/classe-add.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ClasseComponent } from './classe/classe.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +43,14 @@ import {MatButtonModule} from '@angular/material/button';
     ModuleAddComponent,
     ModuleDeleteComponent,
     AbsencesEtudiantsComponent,
-    MesAbsencesComponent
+    MesAbsencesComponent,
+    ProfesseursComponent,
+    ProfesseurAddComponent,
+    EtudiantsComponent,
+    EtudiantAddComponent,
+    ClassesComponent,
+    ClasseAddComponent,
+    ClasseComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +64,10 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     MatInputModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

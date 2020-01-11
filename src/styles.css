@@ -1,13 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap');
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 
 
 .fullh{
@@ -17,7 +12,7 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 .title {
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 20px auto;
+  padding: 20px;
   text-align: center;
   background-color: dodgerblue;
   color: #fff;
@@ -37,10 +32,6 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
 .response {
   text-transform: uppercase;
   font-size: 2rem;
@@ -55,4 +46,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .info {
   color: crimson;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+body { font-family: 'Frank Ruhl Libre', serif; }
 

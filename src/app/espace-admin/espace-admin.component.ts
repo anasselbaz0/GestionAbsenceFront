@@ -10,6 +10,7 @@ export class EspaceAdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-3 p-0 m-0">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-9 p-4 m-0">
+
+    <h1 class="title">Ajouter Professeur</h1>
+
+      <form>
+
+        <div class="form-group">
+          <label >Nom Complet</label>
+          <input for = "inputNom" name="nom" type="text" [(ngModel)]="prof.nom" class="form-control" id="exampleInputNom">
+        </div>
+
+
+        <div class="form-group">
+          <label >Nom d'utilisateur</label>
+          <input for = "inputUserName" name="username" type="text" [(ngModel)]="prof.username"class="form-control" id="InputUserName">
+        </div>
+
+        <div class="form-group">
+          <label >Mot de passe</label>
+          <input for= "InputPassword" name="password" type="password" [(ngModel)]="prof.password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+      </form>
+
+
+
+
+  </div>
+</div>

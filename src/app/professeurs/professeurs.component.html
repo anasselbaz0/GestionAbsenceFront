@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-3 p-0 m-0">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-9 p-4 m-0">
+
+    <h1 class="title">professeurs</h1>
+
+
+    <script src="professeur-liste.component.ts"></script>
+    <div class="panel panel-success text-right mb-5" >
+      <button (click)="AjouterProfesseur()" class="btn btn-primary">Ajouter</button>
+    </div>
+    <div class="panel panel-primary">
+
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Nom d'utilisateur</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let professeur of professeurs | async">
+            <td>{{professeur.id}}</td>
+            <td>{{professeur.nom}}</td>
+            <td>{{professeur.username}}</td>
+            <td><button (click)="deleteProfesseur(professeur.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</div>

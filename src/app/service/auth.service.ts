@@ -20,7 +20,6 @@ export class AuthService {
   };
 
   login(user: User): Observable<User> {
-    console.log(user);
     return this.http.post<User>(this.apiURL + 'login', user, this.httpOptions);
   }
 

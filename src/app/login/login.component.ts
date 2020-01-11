@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     const user: User = new User(u, p, this.role.toLocaleUpperCase());
     this.authService.login(user).subscribe(result => {
       console.log(result);
+      console.log(user);
       this.authenticated = result;
       if (this.authenticated !== null) {
         sessionStorage.setItem('username', this.authenticated.username);

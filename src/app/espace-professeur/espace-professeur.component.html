@@ -4,5 +4,60 @@
   </div>
   <div class="col-9 p-4 m-0">
 
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Cycle
+        </mat-panel-title>
+        <mat-panel-description>
+          Cycle Preparatoire
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="row">
+        <mat-card *ngFor="let classe of cpClasses" class="col-3 m-2" style="background-color: gainsboro;">
+          <mat-card-header class="text-center">
+            <mat-card-title class="text-center"> Classe {{ classe.groupe }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <span>Filiere: {{ classe.filiere }}</span>
+            <br><hr>
+            <span>Annee: {{ classe.annee }}</span>
+            <br><hr>
+            <span>Groupe: {{ classe.groupe }}</span>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+              <button class="mr-4 btn-success" style="padding: 5px 20px; border-radius: 10px;" (click)="viewClasse(classe)">Afficher</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Cycle
+        </mat-panel-title>
+        <mat-panel-description>
+          Cycle Ingenieur
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="row">
+        <mat-card *ngFor="let classe of ciClasses" class="col-3 m-2"  style="background-color: gainsboro;">
+          <mat-card-header class="text-center">
+            <mat-card-title class="text-center"> Classe {{ classe.groupe }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <span>Filiere: {{ classe.filiere }}</span>
+            <br><hr>
+            <span>Annee: {{ classe.annee }}</span>
+            <br><hr>
+            <span>Groupe: {{ classe.groupe }}</span>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <button class="mr-4 btn-success" style="padding: 5px 20px; border-radius: 10px;" (click)="viewClasse(classe)">Afficher</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+    </mat-expansion-panel>
   </div>
 </div>

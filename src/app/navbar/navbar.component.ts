@@ -9,11 +9,15 @@ export class NavbarComponent implements OnInit {
 
   title = 'Gestion des Absences';
   username: string;
+  role = 'WALO';
 
   constructor() { }
 
   ngOnInit() {
     this.username = sessionStorage.getItem('username');
+    if (sessionStorage.getItem('role') !== null) {
+      this.role = sessionStorage.getItem('role');
+    }
   }
 
 }

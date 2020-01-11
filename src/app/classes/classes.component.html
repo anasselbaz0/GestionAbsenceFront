@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-3 p-0 m-0">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-9 p-4 m-0">
+
+    <h1 class="title">Classes</h1>
+
+
+    <div class="panel panel-success text-right mb-5" >
+      <button (click)="AjouterClasse()" class="btn btn-primary">Ajouter</button>
+    </div>
+    <div class="panel panel-primary">
+
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Annee</th>
+            <th>Filiere</th>
+            <th>Cycle</th>
+            <th>Groupe</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let classe of classes | async">
+            <td>{{classe.id}}</td>
+            <td>{{classe.annee}}</td>
+            <td>{{classe.filiere}}</td>
+            <td>{{classe.cycle}}</td>
+            <td>{{classe.groupe}}</td>
+            <td><button (click)="deleteClasse(classe.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>

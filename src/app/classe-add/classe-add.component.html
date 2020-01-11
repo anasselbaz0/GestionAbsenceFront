@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-3 p-0 m-0">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-9 p-4 m-0">
+
+    <h1 class="title">Ajouter Classe</h1>
+
+    <form>
+
+      <div class="row">
+
+        <div class="col-3"></div>
+        <div class="col-6 m-0">
+          <mat-form-field class="w-100" appearance="fill">
+            <mat-label>Année</mat-label>
+            <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="classe.annee">
+              <mat-option *ngFor="let a of annees" [value]="a">
+                {{a}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 m-0">
+          <mat-form-field class="w-100" appearance="fill">
+            <mat-label>Filiere</mat-label>
+            <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="classe.filiere">
+              <mat-option *ngFor="let f of filieres" [value]="f">
+                {{f}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 m-0">
+          <mat-form-field class="w-100" appearance="fill">
+            <mat-label>Cycle</mat-label>
+            <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="classe.cycle">
+              <mat-option *ngFor="let c of cycles" [value]="c">
+                {{c}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-6 m-0">
+          <mat-form-field class="w-100" appearance="fill">
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="classe.groupe" type="number" matInput placeholder="Groupe">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
